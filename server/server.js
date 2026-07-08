@@ -1,10 +1,26 @@
+// require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+
+// console.log("Starting Investment Agent Server...");
+// console.log("NODE_ENV:", process.env.NODE_ENV);
+// console.log("PORT:", process.env.PORT);
+// console.log("CLIENT_URL:", process.env.CLIENT_URL);
+
 const express = require('express');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const cors = require('cors');
 const morgan = require('morgan');
-const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+
+require('dotenv').config();
+
+
+// const express = require('express');
+// const mongoose = require('mongoose');
+// const helmet = require('helmet');
+// const cors = require('cors');
+// const morgan = require('morgan');
+// const path = require('path');
+// require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
 // Allow self-signed certs in dev (corporate SSL inspection)
 if (process.env.NODE_ENV === 'development') {
